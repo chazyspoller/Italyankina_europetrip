@@ -2,7 +2,7 @@
   padding: 0 80px;
   max-width: 1170px + 80px * 2;
   width: 100%;
-  margin: -285px auto 0;
+  margin: -290px auto 0;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -58,7 +58,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 22px;
+    margin-bottom: 21px;
     line-height: 27px;
   }
 }
