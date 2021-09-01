@@ -20,6 +20,10 @@
 }
 
 .countries-list--nojs .countries-list__item {
+  &:not(:last-child) {
+    margin-right: 99px;
+  }
+
   @media (max-width: $tablet-width) {
     &::before {
       display: block;
@@ -30,10 +34,6 @@
 .countries-list__item {
   width: auto;
   position: relative;
-
-  &:not(:last-child) {
-    margin-right: 99px;
-  }
 
   &::before {
     content: "";
