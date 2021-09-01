@@ -1,0 +1,45 @@
+.features {
+  @include reset-margins;
+  list-style: none;
+  padding: 30px 0;
+  font: 400 16px/32px $font;
+  color: $intro-grey;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: rgba($basic-text, 0.3);
+  }
+
+  @media (max-width: $tablet-width) {
+    text-align: left;
+    padding: 20px 0 30px;
+  }
+}
+
+.features__item {
+  padding-left: 30px;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  @media (max-width: $tablet-width) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.features__mark {
+  fill: $basic-pink;
+  position: absolute;
+  left: 0;
+  top: 5px;
+}

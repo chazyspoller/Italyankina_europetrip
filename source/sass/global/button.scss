@@ -1,0 +1,28 @@
+.button {
+  display: inline-block;
+  font: 700 12px/14px $font;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: $basic-pink;
+  color: $white;
+  padding: 30px 40px;
+  box-sizing: border-box;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    background-color: $basic-orange;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 250px;
+    margin: 0 auto;
+    font: 500 10px/12px $font;
+    text-align: center;
+    padding: 19px 40px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 288px;
+  }
+}

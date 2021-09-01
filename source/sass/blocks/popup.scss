@@ -1,0 +1,124 @@
+.popup {
+  position: relative;
+  width: 728px;
+  padding-left: 338px;
+  box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: $popup-back url("../img/popup-back.jpg") left center no-repeat;
+  background-size: auto 100%;
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    max-height: 100vh;
+    background: $white;
+    padding: 0;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/popup-back@2x.jpg");
+  }
+}
+
+.popup__form {
+  padding: 73px 60px 88px;
+  text-align: center;
+  background-color: $popup-back;
+  position: relative;
+
+  &:focus {
+    outline: none;
+  }
+
+  @media (max-width: $mobile-width) {
+    background-color: $white;
+    padding: 100px 16px 185px;
+  }
+}
+
+.popup__close {
+  position: absolute;
+  z-index: 30;
+  top: 19px;
+  right: 19px;
+  border: none;
+  background-color: transparent;
+  width: 23px;
+  height: 23px;
+  opacity: 20%;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $basic-dark-grey;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 32px;
+    height: 1px;
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+.popup__title {
+  @include reset-margins;
+  font: 600 25px/43px $font;
+  color: $basic-grey;
+  margin-bottom: 50px;
+}
+
+.popup__input-box {
+  margin-bottom: 20px;
+}
+
+.popup__button {
+  border: none;
+  width: 176px;
+  padding: 18px;
+  box-sizing: border-box;
+
+  @media (max-width: $tablet-width) {
+    width: 250px;
+    padding: 19px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    padding: 19px;
+  }
+}
+
+.popup__send {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  background-color: $popup-back;
+  text-align: center;
+  padding: 0 165px;
+  box-sizing: border-box;
+
+  &--show {
+    display: flex;
+    align-items: center;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0 16px;
+  }
+}
+
+.popup__text-send {
+  @include reset-margins;
+  font: 500 25px/43px $font;
+  color: $basic-grey;
+}

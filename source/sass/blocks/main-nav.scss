@@ -1,0 +1,132 @@
+.main-nav {
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  align-items: center;
+
+  @media (max-width: $tablet-width) {
+    grid-template-columns: 1fr max-content;
+    position: relative;
+  }
+}
+
+.main-nav__logo {
+  margin-right: 20px;
+  line-height: 0;
+
+  @media (max-width: $tablet-width) {
+    margin-left: 21px;
+
+    img {
+      width: 44px;
+      height: 17px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-left: 16px;
+  }
+}
+
+.main-nav__menu {
+  @media (max-width: $tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+}
+
+.main-nav__phone {
+  display: block;
+  margin-left: 70px;
+  font: 400 18px/32px $font;
+  text-decoration: underline;
+  padding-left: 40px;
+  margin-right: 5px;
+  position: relative;
+  color: $basic-dark-grey;
+
+  &:hover,
+  &:focus {
+    color: $basic-pink;
+  }
+
+  &:hover .main-nav__phone-icon,
+  &:focus .main-nav__phone-icon {
+    stroke: $basic-pink;
+  }
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__phone-icon {
+  stroke: $basic-dark-grey;
+  fill: none;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.main-nav__toggle {
+  display: none;
+  cursor: pointer;
+
+  @include reset-margins;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+    width: 72px;
+    height: 50px;
+    background-color: $basic-pink;
+    border: none;
+    position: relative;
+    z-index: 20;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 22.5px;
+      height: 1px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $white;
+      box-shadow:
+        0 -6px 0 0 $white,
+        0 6px 0 0 $white;
+    }
+
+    &:active {
+      background-color: $basic-orange;
+    }
+
+    &--close {
+      background-color: $white;
+      width: 50px;
+      opacity: 20%;
+
+      &::before,
+      &::after {
+        background-color: $basic-dark-grey;
+        box-shadow: none;
+        border-radius: 5px;
+        transform: translate(-50%, -50%) rotate(45deg);
+        width: 32px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 50px;
+  }
+}

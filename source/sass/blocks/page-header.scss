@@ -1,0 +1,11 @@
+.page-header {
+  padding: 36px 80px 32px;
+  max-width: 1170px + 80px * 2;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @media (max-width: $tablet-width) {
+    padding: 0;
+  }
+}

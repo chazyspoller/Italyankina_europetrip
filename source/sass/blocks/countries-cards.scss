@@ -1,0 +1,113 @@
+.countries-cards {
+  @include reset-margins;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+  }
+}
+
+.countries-cards__item {
+  position: relative;
+  flex-basis: 29.9%;
+  margin-right: 5%;
+  margin-bottom: 100px;
+  background-color: $footer-separator;
+
+  picture {
+    display: block;
+    line-height: 0;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 430px;
+  }
+
+  &:nth-child(3n),
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    flex-basis: 46.8%;
+    margin-right: 6.4%;
+    margin-bottom: 40px;
+    height: 425px;
+
+    &:nth-child(3n) {
+      margin-right: 6.4%;
+    }
+
+    &:nth-child(2n),
+    &:last-child {
+      margin-right: 0;
+    }
+
+    img {
+      height: 425px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-basis: auto;
+    margin: 0 0 35px 0;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}
+
+.countries-cards__name {
+  @include reset-margins;
+  position: absolute;
+  bottom: 0;
+  width: 61%;
+  min-width: max-content;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $white;
+  padding: 16px 5px;
+  text-align: center;
+  font: 500 24px/30px $font;
+  color: $intro-grey;
+  letter-spacing: -0.5px;
+
+  @media (max-width: $tablet-width) {
+    width: 71.2%;
+  }
+}
+
+.countries-cards__item:hover .countries-cards__item-box-link,
+.countries-cards__item:focus-within .countries-cards__item-box-link {
+  display: flex;
+}
+
+.countries-cards__item-box-link {
+  position: absolute;
+  z-index: 2;
+  display: none;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  background-color: $card-hover;
+}
+
+.countries-cards__link {
+  display: block;
+  width: 76%;
+  padding: 30px 5px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  margin: auto;
+  font: 500 14px/17px $font;
+  letter-spacing: 2px;
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}

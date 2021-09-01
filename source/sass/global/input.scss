@@ -1,0 +1,24 @@
+.input {
+  width: 100%;
+  padding: 16px 15px 15px;
+  box-sizing: border-box;
+  border: 1px solid $popup-input;
+  font: 400 14px/17px $font;
+  color: $basic-grey;
+
+  &--phone {
+    padding-left: 51px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: $basic-grey;
+  }
+
+  @media (max-width: $mobile-width) {
+    color: $basic-dark-grey;
+  }
+}

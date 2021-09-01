@@ -1,0 +1,14 @@
+.page-main__wrapper-overlay {
+  display: none;
+
+  &--show {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 20;
+    background-color: $ask-shadow;
+  }
+}

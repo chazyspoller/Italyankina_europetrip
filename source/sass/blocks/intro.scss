@@ -1,0 +1,122 @@
+.intro {
+  padding: 185px 0 296px;
+  background: $footer-separator url("../img/intro.jpg") top center no-repeat;
+  background-size: cover;
+  position: relative;
+
+  @media (max-width: $tablet-width) {
+    padding: 60px 24% 83px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 81px 5% 80px;
+    background: $white;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/intro@2x.jpg");
+
+    @media (max-width: $mobile-width) {
+      background-image: none;
+    }
+  }
+}
+
+.intro__back {
+  @media (max-width: $mobile-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 45.5%;
+    background: $footer-separator url("../img/intro.jpg") top center no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/intro@2x.jpg");
+      background-size: cover;
+    }
+  }
+}
+
+.intro__box {
+  padding: 0 138px 0 40.5%;
+  position: relative;
+  z-index: 1;
+  max-width: 1170px + 80px * 2;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+
+  @media (max-width: $tablet-width) {
+    padding: 0;
+    text-align: center;
+  }
+}
+
+.intro__title {
+  @include reset-margins;
+  letter-spacing: -1px;
+  color: $white;
+  margin-bottom: 30px;
+
+  &::before {
+    display: none;
+  }
+
+  @media (max-width: $tablet-width) {
+    letter-spacing: 0;
+    margin-bottom: 15px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 102px;
+  }
+}
+
+.intro__text {
+  @include reset-margins;
+  letter-spacing: -0.5px;
+  color: $white;
+  margin-bottom: 34px;
+  padding-right: 50px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 8px;
+    padding-right: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    color: $intro-grey;
+    margin-bottom: 18px;
+  }
+}
+
+.intro__link-more {
+  min-width: 340px;
+  padding-right: 60px;
+  box-sizing: border-box;
+  position: relative;
+  text-align: left;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/arrow-button.svg");
+
+    @media (max-width: $tablet-width) {
+      background-image: url("../img/arrow-button-thin.svg");
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    min-width: 250px;
+    text-align: left;
+    padding: 19px 60px 19px 40px;
+  }
+}

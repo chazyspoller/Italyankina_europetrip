@@ -1,0 +1,111 @@
+.prices {
+  padding: 0 80px;
+  max-width: 1170px + 80px * 2;
+  width: 100%;
+  margin: -285px auto 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 110px;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+    margin-top: 0;
+    margin-bottom: 80px;
+    padding: 0 2.6%;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0 5%;
+    margin-bottom: 20px;
+  }
+}
+
+.prices__intro {
+  order: 2;
+  width: 26%;
+  margin-left: auto;
+
+  @media (max-width: $tablet-width) {
+    order: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+
+.prices__title {
+  letter-spacing: 0;
+  margin-bottom: 53px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  &::before {
+    width: 105%;
+  }
+}
+
+.prices__text {
+  @include reset-margins;
+  margin-bottom: 60px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 22px;
+    line-height: 27px;
+  }
+}
+
+.prices__text-contact {
+  @include reset-margins;
+  font: 500 22px/34px $font;
+  color: $basic-dark-grey;
+  text-align: center;
+  margin-bottom: 5px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}
+
+.prices__contacts-link {
+  display: block;
+  padding-left: 50px;
+  font: 400 20px/40px $font;
+  color: $black;
+  text-decoration: none;
+  position: relative;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 0;
+    font-size: 18px;
+    line-height: 32px;
+    color: $basic-pink;
+    text-decoration: underline;
+  }
+}
+
+.prices__contacts-icon {
+  stroke: $basic-pink;
+  fill: none;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.prices__tours-type {
+  @include reset-margins;
+}

@@ -1,0 +1,136 @@
+.description-trip {
+  display: none;
+
+  &--show {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: center;
+    min-height: 596px;
+
+    @media (max-width: $tablet-width) {
+      padding: 30px 0 0;
+      display: block;
+    }
+
+    @media (max-width: $mobile-width) {
+      padding: 23px 0 0;
+    }
+  }
+}
+
+.description-trip__back {
+  min-height: 596px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    min-height: 415px;
+    background-position: center top;
+    background-size: cover;
+    align-items: flex-end;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-size: auto 596px;
+  }
+
+  &--greece {
+    background-image: url("../img/greece-back.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/greece-back@2x.jpg");
+    }
+
+    @media (max-width: $tablet-width) {
+      background-image: url("../img/greece-back-tablet.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/greece-back-tablet@2x.jpg");
+        background-size: auto 415px;
+      }
+    }
+  }
+
+  &--albania {
+    background-image: url("../img/albania-back.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/albania-back@2x.jpg");
+    }
+
+    @media (max-width: $tablet-width) {
+      background-image: url("../img/albania-back-tablet.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/albania-back-tablet@2x.jpg");
+        background-size: auto 415px;
+      }
+    }
+  }
+
+  &--macedonia {
+    background-image: url("../img/macedonia-back.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/macedonia-back@2x.jpg");
+    }
+
+    @media (max-width: $tablet-width) {
+      background-image: url("../img/macedonia-back-tablet.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/macedonia-back-tablet@2x.jpg");
+        background-size: auto 415px;
+      }
+    }
+  }
+
+  &--montenegro {
+    background-image: url("../img/montenegro-back.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/montenegro-back@2x.jpg");
+    }
+
+    @media (max-width: $tablet-width) {
+      background-image: url("../img/montenegro-back-tablet.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/montenegro-back-tablet@2x.jpg");
+        background-size: auto 415px;
+      }
+    }
+  }
+
+  &--croatia {
+    background-image: url("../img/croatia-back.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/croatia-back@2x.jpg");
+    }
+
+    @media (max-width: $tablet-width) {
+      background-image: url("../img/croatia-back-tablet.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/croatia-back-tablet@2x.jpg");
+        background-size: auto 415px;
+      }
+    }
+  }
+}
+
+.description-trip__about {
+  @media (max-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 50px;
+  }
+}

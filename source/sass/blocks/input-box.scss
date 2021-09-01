@@ -1,0 +1,60 @@
+.input-box {
+  position: relative;
+
+  &--wrong {
+    &::before {
+      content: "Данные не верны";
+      position: absolute;
+      left: 0;
+      top: -16px;
+      font: 400 12px/14px $font;
+      color: $basic-pink;
+    }
+  }
+}
+
+.input-box--wrong .input-box__input {
+  border-color: $basic-pink;
+}
+
+.input-box__phone-mark {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  color: $basic-grey;
+  font: 400 14px/17px $font;
+
+  @media (max-width: $mobile-width) {
+    color: $basic-dark-grey;
+  }
+
+  sup {
+    font: 700 17px/21px $font;
+    color: $basic-pink;
+  }
+}
+
+.input-box__input {
+  width: 100%;
+  padding: 16px 15px 15px;
+  box-sizing: border-box;
+  border: 1px solid $popup-input;
+  font: 400 14px/17px $font;
+  color: $basic-grey;
+
+  &--phone {
+    padding-left: 51px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: $basic-grey;
+  }
+
+  @media (max-width: $mobile-width) {
+    color: $basic-dark-grey;
+  }
+}

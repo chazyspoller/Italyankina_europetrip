@@ -1,0 +1,43 @@
+.about-country {
+  padding-right: 20%;
+
+  @media (max-width: $tablet-width) {
+    padding: 0 2.6%;
+    text-align: center;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0 5%;
+  }
+}
+
+.about-country__title {
+  margin-bottom: 40px;
+  line-height: 90px;
+  word-wrap: break-word;
+
+  &::before {
+    width: 85%;
+    bottom: -15px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 20px;
+    line-height: 45px;
+  }
+
+  @media (max-width: $mobile-width) {
+    line-height: 36px;
+  }
+}
+
+.about-country__text {
+  @include reset-margins;
+  letter-spacing: -0.5px;
+  margin-bottom: 50px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 20px;
+    padding: 0;
+  }
+}

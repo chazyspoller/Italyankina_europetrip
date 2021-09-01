@@ -1,0 +1,49 @@
+.visit-countries {
+  padding: 200px 80px 10px;
+  max-width: 1170px + 80px * 2;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @media (max-width: $tablet-width) {
+    padding: 80px 10% 40px;
+    text-align: center;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0 5% 0;
+  }
+}
+
+.visit-countries__title {
+  margin-bottom: 60px;
+  margin-right: 60%;
+
+  &::before {
+    height: 4px;
+    width: 49%;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.visit-countries__text {
+  @include reset-margins;
+  margin-bottom: 55px;
+  margin-right: 70%;
+  letter-spacing: -0.5px;
+
+  @media (max-width: $tablet-width) {
+    margin-right: 0;
+    padding: 0 20%;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+}
